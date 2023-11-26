@@ -2,12 +2,30 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
-    grid-gap: 10px; /* Add some gap between grid items */
+    grid-gap: 40px; /* Add some gap between grid items */
 }
 
 /* Style for grid items (cells) */
 .grid-item {
-    border: 1px solid #ddd; /* Add a border for better visualization */
-    padding: 20px; /* Add some padding for content */
-    text-align: center; /* Center the content */
+    padding: 50px;
+    text-align: center;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-weight: 525;
+    transition: all 3s;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.gri
+
+.body-contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
 }
