@@ -2,14 +2,14 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
-    grid-gap: 40px; /* Add some gap between grid items */
+    grid-gap: 20px; /* Add some gap between grid items */
 }
 
 /* Style for grid items (cells) */
 .grid-item {
-    padding: 50px;
+    padding: 100px 100px;
     text-align: center;
-    background-color: #4caf50;
+    background-color: #4c78af;
     color: white;
     border: none;
     border-radius: 5px;
@@ -20,7 +20,8 @@
     transition: all 3s;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.gri
+
+
 
 .body-contents {
     display: flex;
@@ -29,3 +30,4 @@
     height: 100vh;
     margin: 0;
 }
+
