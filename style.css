@@ -1,79 +1,104 @@
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #10131c;
+.name {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  margin-top: 2%;
+  margin-left: 1%;
 }
 
-.navigation{
-    position: relative;
-    width: 100px;
-    height: 100px;
-    background: #212532;
-    border-radius: 10px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: .5s;
-    transition-delay: .8s;
-}
-.navigation.active{
-    width: 200px;
-    height: 200px;
-    transition-delay: 0s;
+.name .pic-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
-.navigation span{
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    border-radius: 50%;
-    transform: translate(calc(12px * var(--x)), calc(12px * var(--y)));
-    transition: transform .5s, width .5s, height .5s, background .5s;
-    transition-delay: calc(.1s * var(--i));
-
-}
-.navigation.active span{
-    width: 60px;
-    height: 60px;
-    background: #333849;
-    transform: translate(calc(300px * var(--x)), calc(300px * var(--y)));
+.name .pic {
+  width: 130px;
+  height: 110px;
 }
 
-.navigation span ion-icon{
-    transition: .5s;
-    font-size: 0em;
+.text {
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 300;
+  text-shadow: 0px 0px 10px #fff;
+  padding-left: 2%;
 }
 
-.navigation.active span ion-icon{
-    font-size: 1.35em;
-    color: #fff;
-}
-.navigation.active span:hover ion-icon{
-    color: #2dfc52;
-    filter: drop-shadow(0 0 2px #2dfc52) 
-     drop-shadow(0 0 5px #2dfc52)
-     drop-shadow(0 0 15px #2dfc52);
+body {
+  min-height: 100vh;
+  background: #10131c;
 }
 
+.navigation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: #212532;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  /* transition-delay: 0.8s; */
+}
 
+.navigation:hover {
+  background-color: rgb(59, 90, 156);
+}
 
+.navigation.active {
+  width: 200px;
+  height: 200px;
+  transition-delay: 0s;
+}
 
+.navigation span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 50%;
+  transform: translate(calc(12px * var(--x)), calc(12px * var(--y)));
+  transition: transform 0.5s, width 0.5s, height 0.5s, background 0.5s;
+  transition-delay: calc(0.1s * var(--i));
+}
+.navigation.active span {
+  width: 60px;
+  height: 60px;
+  background: #333849;
+  transform: translate(calc(300px * var(--x)), calc(300px * var(--y)));
+}
 
+.navigation span ion-icon {
+  transition: 0.5s;
+  font-size: 0em;
+}
 
+.navigation.active span ion-icon {
+  font-size: 1.35em;
+  color: #fff;
+}
+.navigation.active span:hover ion-icon {
+  color: #2dfc52;
+  filter: drop-shadow(0 0 2px #2dfc52) drop-shadow(0 0 5px #2dfc52)
+    drop-shadow(0 0 15px #2dfc52);
+}
 
 /* Add some basic styling for the grid */
 /*
@@ -121,4 +146,3 @@ h2{
 h3{
     
 } */
-
