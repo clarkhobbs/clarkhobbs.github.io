@@ -60,6 +60,7 @@ body {
 }
 
 .navigation.active {
+  background-color: #212532;
   width: 200px;
   height: 200px;
   transition-delay: 0s;
@@ -79,8 +80,8 @@ body {
   transition-delay: calc(0.1s * var(--i));
 }
 .navigation.active span {
-  width: 60px;
-  height: 60px;
+  width: 120px;
+  height: 120px;
   background: #333849;
   transform: translate(calc(300px * var(--x)), calc(300px * var(--y)));
 }

@@ -16,13 +16,13 @@
       <h1 class="text">Clark Hobbs</h1>
     </div>
     <div class="navigation">
-      <span class="item" style="--i: 0; --x: -1; --y: 0">
+      <span class="item-linkedin" style="--i: 0; --x: -1; --y: 0">
           <ion-icon name="logo-linkedin"></ion-icon> </span>
-      <span class="item" style="--i: 1; --x: 1; --y: 0">
+      <span class="item-git" style="--i: 1; --x: 1; --y: 0">
           <ion-icon name="logo-github"></ion-icon> </span>
-      <span class="item" style="--i: 2; --x: 0; --y: -1">
+      <span class="item-insta" style="--i: 2; --x: 0; --y: -1">
           <ion-icon name="logo-instagram"></ion-icon> </span>
-      <span class="item" style="--i: 3; --x: 0; --y: 1">
+      <span class="item-youtube" style="--i: 3; --x: 0; --y: 1">
           <ion-icon name="logo-youtube"></ion-icon> </span
       >
       <!-- <span class="item" style="--i: 4; --x: 1; --y: 1">
@@ -44,10 +44,59 @@
 
     <!-- ========= Sctipt ======== -->
     <script>
-      const navigation = document.querySelector(".navigation");
-      navigation.addEventListener("click", () => {
-        navigation.classList.toggle("active");
-      });
+      const navigation = document.querySelector(".item-close");
+      const openNav = document.querySelector(".navigation");
+
+      isOpen = false;
+
+      const open_G = document.querySelector(".item-git");
+      const open_Link = document.querySelector(".item-linkedin");
+      const open_You =  document.querySelector(".item-youtube");
+      const open_Insta = document.querySelector(".item-insta");
+
+      navigation.addEventListener("click", activate);
+      open_G.addEventListener("click", openGit);
+      open_Link.addEventListener("click", openLinked);
+      open_Insta.addEventListener("click", openInsta);
+      open_You.addEventListener("click", openYT);
+
+      function activate() 
+      {
+        openNav.classList.toggle("active");
+        isOpen = !isOpen;
+      }
+
+      function openLinked()
+      {
+        if(isOpen == true)
+        {
+          window.open("https://www.linkedin.com/in/clark-hobbs/", "_blank");
+        }
+      }
+
+      function openGit() 
+      {
+        if(isOpen == true)
+        {
+          window.open("https://github.com/clarkhobbs", "_blank");
+        }
+      }
+
+      function openYT()
+      {
+        if(isOpen == true)
+        {
+          window.open("https://www.youtube.com/channel/UCay7xt35XyWd9E1XeVzxngw", "_blank");
+        }
+      }
+      
+      function openInsta()
+      {
+        if(isOpen == true)
+        {
+          window.open("https://www.instagram.com/clark.hobbs/", "_blank");
+        }
+      }
     </script>
 
     <script
