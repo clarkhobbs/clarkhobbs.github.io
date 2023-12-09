@@ -92,7 +92,7 @@ body {
 }
 
 .navigation.active span ion-icon {
-  font-size: 1.35em;
+  font-size: 48px;
   color: #fff;
 }
 .navigation.active span:hover ion-icon {
@@ -100,50 +100,3 @@ body {
   filter: drop-shadow(0 0 2px #2dfc52) drop-shadow(0 0 5px #2dfc52)
     drop-shadow(0 0 15px #2dfc52);
 }
-
-/* Add some basic styling for the grid */
-/*
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width
-    grid-gap: 20px; /* Add some gap between grid items 
-}
-
-/* Style for grid items (cells) */
-/* .grid-item {
-    padding: 100px 100px;
-    background-color: #4c78af;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 1s;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.grid-item:hover{
-    background: rgb(175, 76, 84);
-}
-
-.body-contents {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-}
-
-h1{
-    color: white;
-    font-size: 20px;
-    text-align: left;
-}
-
-h2{
-    color: white;
-    font-size: 15px;
-    text-align: left;
-}
-
-h3{
-    
-} */
