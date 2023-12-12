@@ -11,7 +11,7 @@
   <body>
     <div class="name">
       <div class="pic-wrapper">
-        <img class="pic" src="kirito.png" alt="kirito pfp" />
+        <img class="pic" src="pfpclark.png" alt="kirito pfp" />
       </div>
       <h1 class="text">Clark Hobbs</h1>
     </div>
@@ -44,17 +44,20 @@
 
     <!-- ========= Sctipt ======== -->
     <script>
-      const navigation = document.querySelector(".item-close");
-      const openNav = document.querySelector(".navigation");
+      const navigation = document.querySelector(".navigation");
+      const closeNav = document.querySelector(".item-close");
 
       isOpen = false;
 
+      //variables that store the hyper references
       const open_G = document.querySelector(".item-git");
       const open_Link = document.querySelector(".item-linkedin");
       const open_You =  document.querySelector(".item-youtube");
       const open_Insta = document.querySelector(".item-insta");
 
+      //on click events
       navigation.addEventListener("click", activate);
+      closeNav.addEventListener("click", activate);
       open_G.addEventListener("click", openGit);
       open_Link.addEventListener("click", openLinked);
       open_Insta.addEventListener("click", openInsta);
@@ -62,8 +65,17 @@
 
       function activate() 
       {
-        openNav.classList.toggle("active");
-        isOpen = !isOpen;
+        if(isOpen == false)
+        {
+          navigation.classList.toggle("active");
+          isOpen = true;
+        } 
+        else
+        {
+          closeNav.classList.toggle("active");
+          isOpen = false;
+      
+        }
       }
 
       function openLinked()

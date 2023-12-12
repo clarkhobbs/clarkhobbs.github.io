@@ -22,8 +22,8 @@
 }
 
 .name .pic {
-  width: 130px;
-  height: 110px;
+  width: 100px;
+  height: 100px;
 }
 
 .text {
@@ -40,8 +40,8 @@ body {
 }
 
 .navigation {
-  position: fixed;
-  top: 50%;
+  position: relative;
+  margin-top: 25%;
   left: 50%;
   width: 100px;
   height: 100px;
@@ -82,7 +82,7 @@ body {
 .navigation.active span {
   width: 120px;
   height: 120px;
-  background: #333849;
+  
   transform: translate(calc(300px * var(--x)), calc(300px * var(--y)));
 }
 
@@ -93,10 +93,46 @@ body {
 
 .navigation.active span ion-icon {
   font-size: 48px;
-  color: #fff;
+  color: black;
 }
 .navigation.active span:hover ion-icon {
   color: #2dfc52;
   filter: drop-shadow(0 0 2px #2dfc52) drop-shadow(0 0 5px #2dfc52)
     drop-shadow(0 0 15px #2dfc52);
 }
+
+/*Icon backgrounds and style*/
+.navigation span .item-git {
+  background: #333849;
+}
+
+.navigation span.item-insta {
+  background: linear-gradient(to right, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #FFBD2E, #4CAF50);
+}
+
+.navigation span.item-linkedin {
+  background:#2d75fc;
+}
+
+.navigation span.item-youtube {
+  background-color: #d12836;
+}
+
+/*Hover over icon animations and text
+.navigation .active .item-git:hover {
+
+}
+
+.navigation .active .item-insta:hover {
+  
+}
+
+.navigation .active .item-linkedin:hover {
+
+}
+
+.navigation .active .item-youtube:hover {
+
+}
+
+*/
