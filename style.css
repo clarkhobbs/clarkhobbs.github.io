@@ -28,9 +28,8 @@
 
 .text {
   color: #fff;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 300;
-  text-shadow: 0px 0px 10px #fff;
+  font-family: 'Lilita One', sans-serif;
+  font-weight: 200;
   padding-left: 2%;
 }
 
@@ -43,8 +42,8 @@ body {
   position: relative;
   margin-top: 25%;
   left: 50%;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background: #212532;
   border-radius: 10px;
   cursor: pointer;
@@ -66,6 +65,10 @@ body {
   transition-delay: 0s;
 }
 
+.navigation span.hide {
+  display: none;
+}
+
 .navigation span {
   position: absolute;
   width: 10px;
@@ -76,14 +79,23 @@ body {
   background: #fff;
   border-radius: 50%;
   transform: translate(calc(12px * var(--x)), calc(12px * var(--y)));
-  transition: transform 0.5s, width 0.5s, height 0.5s, background 0.5s;
+  transition: transform 0.5s, width 0.5s, height 0.5s;
   transition-delay: calc(0.1s * var(--i));
 }
 .navigation.active span {
   width: 120px;
   height: 120px;
-  
   transform: translate(calc(300px * var(--x)), calc(300px * var(--y)));
+}
+
+.navigation.active span.hide{
+  display: inherit;
+  background: #10131c;
+  font-family: 'Lilita One', sans-serif;
+  font-size: 20px;
+  color: #10131c;
+  z-index: -1;
+  transition: .3s;
 }
 
 .navigation span ion-icon {
@@ -96,18 +108,20 @@ body {
   color: black;
 }
 .navigation.active span:hover ion-icon {
-  color: #2dfc52;
-  filter: drop-shadow(0 0 2px #2dfc52) drop-shadow(0 0 5px #2dfc52)
-    drop-shadow(0 0 15px #2dfc52);
+  color: #ffffff;
+  filter: drop-shadow(0 0 2px #000000) drop-shadow(0 0 5px #303130)
+    drop-shadow(0 0 15px #1c1d1c);
 }
 
 /*Icon backgrounds and style*/
-.navigation span .item-git {
-  background: #333849;
+.navigation span.item-git {
+  background: #56575a;
 }
 
 .navigation span.item-insta {
-  background: linear-gradient(to right, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #FFBD2E, #4CAF50);
+  /* background: linear-gradient(to right, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #FFBD2E, #4CAF50); */
+  background-image: url("instacolors.jpg");
+  background-size: 150px 150px;
 }
 
 .navigation span.item-linkedin {
@@ -118,21 +132,36 @@ body {
   background-color: #d12836;
 }
 
-/*Hover over icon animations and text
-.navigation .active .item-git:hover {
 
+/*Hover over icon animations and text*/
+.navigation span.item-git:hover + .hide{
+  display: inherit;
+  color: white;
+  translate: 100px;
+  filter: drop-shadow(0 0 2px #f0f0f0) drop-shadow(0 0 5px #627262)
+    drop-shadow(0 0 15px #96af96);
 }
 
-.navigation .active .item-insta:hover {
-  
+.navigation span.item-insta:hover + .hide{
+  display: inherit;
+  translate: 110px;
+  color: rgb(255, 255, 255);
+  filter: drop-shadow(0 0 2px #723b80) drop-shadow(0 0 5px #4b4db3)
+  drop-shadow(0 0 15px #bcc0bc);
 }
 
-.navigation .active .item-linkedin:hover {
-
+.navigation span.item-linkedin:hover + .hide{
+  display: inherit;
+  translate: -105px;
+  color: white;
+  filter: drop-shadow(0 0 2px #4a7cc7) drop-shadow(0 0 5px #4e64c5)
+  drop-shadow(0 0 15px #3e60a0);
 }
 
-.navigation .active .item-youtube:hover {
-
+.navigation span.item-youtube:hover + .hide{
+  display: inherit;
+  translate: -100px;
+  color: white;
+  filter: drop-shadow(0 0 2px #ca2323) drop-shadow(0 0 5px #b13535)
+  drop-shadow(0 0 15px #a7242f);
 }
-
-*/

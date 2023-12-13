@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clark Hobbs Landing Page</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -15,16 +18,33 @@
       </div>
       <h1 class="text">Clark Hobbs</h1>
     </div>
+
+    <!-- Dot Navigation Html Code-->
     <div class="navigation">
+      <!--LinkedIn-->
       <span class="item-linkedin" style="--i: 0; --x: -1; --y: 0">
           <ion-icon name="logo-linkedin"></ion-icon> </span>
+      <span class="hide" style="--i: 0; --x: -1; --y: 0">LinkedIn</span>
+
+
+      <!--GitHub-->
+      
       <span class="item-git" style="--i: 1; --x: 1; --y: 0">
           <ion-icon name="logo-github"></ion-icon> </span>
+      <span class="hide" style="--i: 1; --x: 1; --y: 0">GitHub</span>
+
+      <!--Instagram-->
+      
       <span class="item-insta" style="--i: 2; --x: 0; --y: -1">
           <ion-icon name="logo-instagram"></ion-icon> </span>
+      <span class="hide" style="--i: 2; --x: 0; --y: -1">Instagram</span>
+
+      <!--Youtube-->
+
       <span class="item-youtube" style="--i: 3; --x: 0; --y: 1">
-          <ion-icon name="logo-youtube"></ion-icon> </span
-      >
+          <ion-icon name="logo-youtube"></ion-icon> </span>
+      <span class="hide" style="--i: 3; --x: 0; --y: 1">Youtube</span>
+
       <!-- <span class="item" style="--i: 4; --x: 1; --y: 1">
         <ion-icon name="game-controller-outline"></ion-icon>
       </span>
@@ -55,6 +75,12 @@
       const open_You =  document.querySelector(".item-youtube");
       const open_Insta = document.querySelector(".item-insta");
 
+      //hover variables
+      
+
+
+      //hover events
+     
       //on click events
       navigation.addEventListener("click", activate);
       closeNav.addEventListener("click", activate);
@@ -78,6 +104,7 @@
         }
       }
 
+      //click redirect functions
       function openLinked()
       {
         if(isOpen == true)
@@ -109,6 +136,9 @@
           window.open("https://www.instagram.com/clark.hobbs/", "_blank");
         }
       }
+
+      //hover functions
+   
     </script>
 
     <script
